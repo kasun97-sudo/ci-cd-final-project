@@ -55,7 +55,7 @@ spec:
           echo "Installing dependencies..."
           npm ci
           echo "Running ESLint..."
-          npm run lint -- $(params.args)
+          npm run lint $(params.args)
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
@@ -79,4 +79,4 @@ spec:
         echo "Installing dependencies..."
         npm ci
         echo "Running Jest tests..."
-        npm test -- $(params.args)
+        npm test $(params.args)
